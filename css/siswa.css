@@ -1,0 +1,500 @@
+/* Scrollable row for complaints */
+.dashboard-row-scroll {
+	height: auto;
+	min-height: 120px;
+	overflow-y: visible;
+	padding-right: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	background: none !important;
+	box-shadow: none !important;
+	border: none !important;
+}
+/* Custom scrollbar styling */
+.dashboard-row-scroll::-webkit-scrollbar {
+	width: 8px;
+	background: #2d0a3a;
+	border-radius: 8px;
+}
+.dashboard-row-scroll::-webkit-scrollbar-thumb {
+	background: #d946ef99;
+	border-radius: 8px;
+}
+/* Card pengaduan siswa (mirip status card) */
+.dashboard-card-complaint {
+	background: rgba(10, 25, 49, 0.15) !important; /* Lebih tipis */
+	border: 1px solid #00e6ff !important;
+	border-radius: 16px !important;
+	box-shadow: 0 0 24px #00e6ff22 !important;
+	padding: 22px 28px !important;
+	min-width: 400px !important;
+	max-width: 700px !important;
+	width: 100%;
+	min-height: 120px !important;
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: flex-start !important;
+	justify-content: center !important;
+	position: relative !important;
+	margin: 0 0 18px 0 !important;
+	margin-left: 0 !important;
+	font-family: 'Quicksand', 'Montserrat', sans-serif !important;
+}
+.dashboard-card-complaint .card-title {
+	font-size: 1.1rem !important;
+	font-weight: 600 !important;
+	margin-bottom: 8px !important;
+	color: #ffe066 !important;
+	display: flex !important;
+	align-items: center !important;
+	gap: 6px !important;
+}
+.dashboard-card-complaint .card-desc {
+	font-size: 0.95rem !important;
+	color: #b0c4de !important;
+	opacity: 0.7 !important;
+}
+.dashboard-card-complaint .card-meta {
+	font-size: 0.97rem !important;
+	color: #d1a4f7 !important;
+	opacity: 0.8 !important;
+}
+.dashboard-card-complaint .card-like {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	margin-left: 12px;
+}
+.dashboard-card-complaint .like-count {
+	color: #fff;
+	font-size: 1.08rem;
+	font-weight: 600;
+	margin-right: 2px;
+}
+/*  untuk love-icon merah saat liked */
+.dashboard-card-complaint .love-icon {
+	vertical-align: middle;
+	margin-left: 2px;
+	cursor: pointer;
+	transition: stroke 0.2s, fill 0.2s;
+}
+.dashboard-card-complaint .love-icon.liked {
+	stroke: #ff4d9d;
+	fill: #ff4d9d75;
+}
+.dashboard-card-complaint .love-icon:hover {
+	stroke: #ff4d9d;
+}
+/* Modal Complaint Custom Style - Rapi dan Modern */
+.complaint-modal-form {
+  margin: 32px auto;
+  padding: 32px 22px 22px 22px;
+  width: 410px;
+  max-width: 96vw;
+  background: rgba(36,0,50,0.85);
+  box-shadow: 0 0 32px #d946ef33, 0 0 8px #d946ef44;
+  border: 2.5px solid #d946ef;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-sizing: border-box;
+}
+.complaint-modal-title {
+	color: #d946ef;
+	margin-bottom: 5px;
+	font-size: 1.5rem;
+	font-family: 'Orbitron','Montserrat',sans-serif;
+	
+}
+.complaint-modal-form {
+	width: 410px;
+	max-width: 96vw;
+	padding: 32px 22px 22px 22px;
+	background: rgba(36,0,50,0.85);
+	box-shadow: 0 0 32px #d946ef33, 0 0 8px #d946ef44;
+	border: 2.5px solid #d946ef;
+	border-radius: 16px;
+	padding:28px;
+	backdrop-filter: blur(8px);
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+	box-sizing: border-box;
+}
+.complaint-modal-form label.student-portal-label {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  display: block;
+  font-size: 0.97rem;
+  color: #f0aaff;
+  letter-spacing: 0.5px;
+}
+.complaint-modal-form label.student-portal-label + .student-portal-input {
+  margin-top: 0px;
+}
+.student-portal-input {
+  min-height: 54px;
+  font-size: 1.13rem;
+  margin-bottom: 10px;
+  border: 1.5px solid #d946ef;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: 'Quicksand', 'Montserrat', sans-serif;
+  font-weight: 500;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  box-sizing: border-box;
+  padding: 14px 18px;
+  outline: none;
+  font-size: 1.08rem;
+  width: 100%;
+}
+.student-portal-input:focus {
+  border-color: #00e6ff;
+  background: rgba(0,230,255,0.08);
+  box-shadow: 0 0 16px #00e6ff88, 0 0 4px #d946ef99;
+  color: #fff;
+  outline: none;
+}
+.student-portal-input::placeholder {
+  color: #d1a4f7;
+  opacity: 0.7;
+}
+.complaint-modal-form textarea.student-portal-input {
+  min-height: 110px;
+  resize: vertical;
+  flex-shrink: 0;
+}
+.complaint-modal-btns {
+	display: flex;
+	gap: 16px;
+	margin-top: 18px;
+}
+.complaint-btn-gradient {
+	background: linear-gradient(90deg,#f0aaff 0%,#00e6ff 100%);
+	color: #1a0033;
+	font-weight: 700;
+	border: none;
+	box-shadow: 0 0 16px #d946ef88;
+	font-size: 1.08rem;
+	border-radius: 10px;
+	padding: 14px 0;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+.complaint-btn-cancel {
+	border: 2px solid #d946ef;
+	color: #d946ef;
+	background: transparent;
+	font-size: 1.08rem;
+	border-radius: 10px;
+	padding: 14px 0;
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	display: block;
+}
+/* Modal Complaint Custom Style */
+.complaint-modal-form {
+	background: rgba(36,0,50,0.85);
+	box-shadow: 0 0 40px #d946ef55, 0 0 10px #d946ef;
+	border: 2.5px solid #d946ef;
+	border-radius: 18px;
+	padding: 38px 32px 28px 32px;
+	backdrop-filter: blur(8px);
+}
+/* Gradient button for submit */
+.complaint-btn-gradient {
+	background: linear-gradient(90deg,#f0aaff 0%,#00e6ff 100%);
+	color: #1a0033;
+	font-weight: 700;
+	border: none;
+	box-shadow: 0 0 16px #d946ef88;
+}
+/* Cancel button style */
+.complaint-btn-cancel {
+	border: 2px solid #d946ef;
+	color: #d946ef;
+	background: transparent;
+}
+/* TAB COMPLAINTS */
+.complaints-tab-container {
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto 24px auto;
+	border-radius: 16px 16px 0 0;
+	background: transparent;
+	box-shadow: none;
+	padding: 0 0 0 0;
+	position: relative;
+	margin-left: 0;
+}
+.complaints-tabs {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 18px;
+	padding: 18px 24px 0 24px;
+	padding-left: 0;
+}
+.complaints-tab {
+	background: transparent;
+	color: #d1a4f7;
+	font-size: 1.05rem;
+	font-weight: 700;
+	border: none;
+	border-radius: 24px;
+	padding: 10px 28px;
+	cursor: pointer;
+	box-shadow: none;
+	opacity: 0.8;
+	transition: background 0.2s, color 0.2s, box-shadow 0.2s, opacity 0.2s;
+	outline: none;
+	min-width: 140px;
+	text-align: center;
+}
+.complaints-tab.active {
+	background: linear-gradient(90deg, #f0aaff 0%, #00e6ff 100%);
+	color: #1a0033;
+	opacity: 1;
+	box-shadow: 0 4px 16px 0 #d946ef33;
+}
+.complaints-tab:hover:not(.active) {
+	background: #e0e0e0;
+	color: #1a0033;
+	opacity: 1;
+}
+.complaints-tab-underline, .complaints-tab-underline-bar {
+	display: none !important;
+}
+.complaints-content {
+	width: 100%;
+	max-width: 700px;
+	margin: 0 0 32px 0;
+	background: none !important;
+	border-radius: 0 0 16px 16px;
+	box-shadow: none !important;
+	padding: 32px 32px 24px 32px;
+	min-height: 120px;
+	margin-left: -459px;
+}
+.complaints-history-empty, .complaints-other-empty {
+	color: #d1a4f7;
+	opacity: 0.7;
+	text-align: center;
+	font-size: 1.1rem;
+	padding: 32px 0;
+}
+/* STATUS CARD BOX */
+.dashboard-card {
+  background: rgba(10,25,49,0.7) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 0 24px #00e6ff22 !important;
+  padding: 22px 28px !important;
+  min-width: 180px !important;
+  min-height: 120px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  margin: 0 8px !important;
+  border: 1px solid #00e6ff !important;
+  transition: box-shadow 0.2s, border 0.2s, background 0.2s !important;
+}
+.dashboard-card.pending { border-color: #ffe066 ; }
+.dashboard-card.inprogress { border-color: #00e6ff !important; }
+.dashboard-card.completed { border-color: #00ffb3 !important; }
+.dashboard-card .card-title {
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin-bottom: 8px !important;
+  color: #ffe066 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+.dashboard-card.inprogress .card-title { color: #00e6ff !important; }
+.dashboard-card.completed .card-title { color: #00ffb3 !important; }
+.dashboard-card .card-value {
+  font-size: 2.1rem !important;
+  font-weight: 700 !important;
+  color: #fff !important;
+  margin-bottom: 4px !important;
+}
+.dashboard-card .card-desc {
+  font-size: 0.95rem !important;
+  color: #b0c4de !important;
+  opacity: 0.7 !important;
+}
+/* HEADER, STATUS, SEARCH MODERN */
+.dashboard-header {
+	width: 100%;
+	position: sticky;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 18px 32px 12px 32px;
+	box-sizing: border-box;
+	z-index: 100;
+	background: linear-gradient(90deg, #2d0a3a 0%, #1a0033 100%);
+	border-bottom: none;
+	box-shadow: 0 2px 24px 0 #8e44ec22;
+}
+
+/* Neon blue header underline */
+.dashboard-header::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 0.5px;
+	background: linear-gradient(90deg, #d946ef 0%, #d946ef 100%);
+	box-shadow: 0 0 3px #d946ef, 0 0 1.5px #d946ef;
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	z-index: 101;
+	border-radius: 1px;
+}
+.dashboard-header-left { display: flex; flex-direction: column; align-items: flex-start; }
+.dashboard-header-title { font-size: 1.7rem; font-weight: 700; color: #e0aaff; letter-spacing: 1px; font-family: 'Orbitron', 'Montserrat', 'Quicksand', sans-serif; }
+.dashboard-header-nisn { font-size: 1rem; color: #d1a4f7; opacity: 0.7; margin-top: 2px; }
+.dashboard-header-nisn span { letter-spacing: 1px; }
+.dashboard-header-actions { display: flex; gap: 14px; }
+.dashboard-header-btn { font-weight: 500; font-size: 0.95rem; padding: 6px 17px; border-radius: 5px; cursor: pointer; transition: background 0.2s, color 0.2s, border 0.2s; outline: none; }
+.dashboard-header-btn-primary { background: #d946ef; color: #fff; border: none; box-shadow: 0 0 10px #d946ef88; }
+.dashboard-header-btn-primary:hover { background: #a21caf; }
+.dashboard-header-btn-outline { background: transparent; color: #d1a4f7; border: 1.5px solid #d1a4f7; }
+.dashboard-header-btn-outline:hover { background: #2a1a3b; color: #fff; border-color: #fff; }
+.main-container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	margin-top: 150px; /* Tambah margin agar tidak ketutup header */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 2;
+}
+.dashboard-row { display: flex; gap: 32px; margin-bottom: 32px; justify-content: flex-start; margin-left: -35px; width: 100%; }
+.dashboard-row-status { margin-top: 0; }
+.dashboard-row-search { margin-top: 0; }
+.dashboard-card-search { flex: 2 1 0; align-items: stretch; max-width: 100%; }
+.card-title-search { color: #d1a4f7 !important; }
+.dashboard-card-search .search-form { display: flex; gap: 12px; align-items: center; }
+.dashboard-card-search .search-input { flex: 1; padding: 12px 16px; border-radius: 8px; border: 1.5px solid #8e44ec; background: #232a3b; color: #fff; outline: none; }
+.dashboard-card-search .search-btn { background: #d946ef; color: #fff; font-weight: 700; padding: 12px 28px; border: none; border-radius: 8px; box-shadow: 0 0 10px #d946ef88; cursor: pointer; transition: background 0.2s; }
+.dashboard-card-search .search-btn:hover { background: #a21caf; }
+@media (max-width: 900px) {
+	.dashboard-header { flex-direction: column; align-items: flex-start; gap: 18px; padding: 24px 18px 0 18px; }
+	.main-container { margin-top: 24px; padding: 0 8px; }
+	.dashboard-row { flex-direction: column; gap: 18px; align-items: stretch; }
+	.dashboard-card { max-width: 100%; }
+}
+
+html, body {
+	height: 100%;
+	min-height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	font-family: 'Quicksand', 'Montserrat', sans-serif;
+	background: linear-gradient(135deg, #000000 0%, #1a0033 100%) !important;
+	position: relative;
+	overflow: hidden;
+    ;
+	
+}
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	pointer-events: none;
+	z-index: 0;
+	background-image: repeating-linear-gradient(
+		to right,
+		rgba(0, 153, 255, 0.074) 0px,
+		rgba(0, 153, 255, 0.084) 0.5px,
+		transparent 0.5px,
+		transparent 40px
+	),
+	repeating-linear-gradient(
+		to bottom,
+		rgba(0, 153, 255, 0.074) 0px,
+		rgba(0, 153, 255, 0.084) 0.5px,
+		transparent 0.5px,
+		transparent 40px
+	);
+}
+
+.student-portal-input {
+  background: rgba(36,0,50,0.55);
+  border: 2px solid #d946ef;
+  box-shadow: 0 0 8px #d946ef55, 0 0 2px #00e6ff44;
+  color: #fff;
+  border-radius: 10px;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: 'Quicksand', 'Montserrat', sans-serif;
+  font-weight: 500;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  box-sizing: border-box;
+  padding: 14px 18px;
+  outline: none;
+  font-size: 1.08rem;
+  width: 100%;
+}
+.student-portal-input:focus {
+  border-color: #00e6ff;
+  background: rgba(0,230,255,0.08);
+  box-shadow: 0 0 16px #00e6ff88, 0 0 4px #d946ef99;
+  color: #fff;
+  outline: none;
+}
+.student-portal-input::placeholder {
+  color: #d1a4f7;
+  opacity: 0.7;
+}
+
+#complaint-modal.student-portal-container {
+  align-items: center !important;
+  justify-content: center !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  min-height: 100vh;
+  overflow-y: unset !important;
+  background: rgba(24,30,42,0.25) !important;
+  backdrop-filter: blur(8px) !important;
+}
+.complaint-modal-form {
+  width: 560px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 28px;
+  border-radius: 16px;
+  box-sizing: border-box;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: rgba(24, 0, 40, 0.35) !important;
+  backdrop-filter: blur(6px) !important;
+  box-shadow: 0 0 32px #d946ef55;
+}
+
+.dashboard-wrapper {
+  overflow-y: auto;
+  max-height: 100vh;
+}

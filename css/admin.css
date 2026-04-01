@@ -1,0 +1,306 @@
+@media (max-width: 900px) {
+  .admin-dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 24px 18px 0 18px;
+    min-width: 0;
+    width: 100vw;
+  }
+  .admin-dashboard-header > div:first-child {
+    margin-left: 0;
+  }
+  .admin-dashboard-main {
+    margin-top: 24px;
+    padding: 0 8px;
+  }
+  .admin-dashboard-row {
+    flex-direction: column;
+    gap: 18px;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  .admin-dashboard-card {
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+  }
+  .admin-dashboard-section {
+    padding: 18px 8px 12px 8px;
+  }
+  .admin-dashboard-btn {
+    margin-right: 0;
+  }
+  .admin-dashboard-table {
+    font-size: 0.95rem;
+    min-width: 600px;
+  }
+  .admin-dashboard-section-title {
+    font-size: 1.05rem;
+  }
+}
+.admin-dashboard-card .admin-title-pending {
+  color: #ffe066;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: -18px;
+}
+.admin-dashboard-card .admin-title-inprogress {
+  color: #00e6ff;
+  font-weight: 600;
+  margin-left: -18px;
+}
+.admin-dashboard-card .admin-title-completed {
+  color: #00ffb3;
+  font-weight: 600;
+  margin-left: -18px;
+}
+/* Admin Dashboard Modern Style */
+body {
+  background: linear-gradient(135deg, #000000 0%, #1a0033 100%);
+  font-family: 'Quicksand', 'Montserrat', sans-serif;
+  color: #b0c4de;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: auto;
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(0, 153, 255, 0.074) 0px,
+    rgba(0, 153, 255, 0.084) 0.5px,
+    transparent 0.5px,
+    transparent 40px
+  ),
+  repeating-linear-gradient(
+    to bottom,
+    rgba(0, 153, 255, 0.074) 0px,
+    rgba(0, 153, 255, 0.084) 0.5px,
+    transparent 0.5px,
+    transparent 40px
+  );
+}
+.admin-dashboard-header {
+  width: 100vw;
+  min-width: 100vw;
+  margin: 0;
+  padding: 18px 0 12px 0;
+  min-height: 70px;
+  left: 0;
+  right: 0;
+  border-radius: 0;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  z-index: 100;
+  background: linear-gradient(90deg, #0a1a33 0%, #2d0a3a 100%);
+  border-bottom: 2px solid #00e6ff;
+  box-shadow: 0 2px 24px 0 #00e6ff44;
+}
+.admin-dashboard-header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 120px;
+}
+.admin-dashboard-title {
+  font-family: 'Orbitron','Montserrat','Quicksand',sans-serif !important;
+  color: #00e6ff !important;
+  font-size: 1.85rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px !important;
+  margin-right: -60px;
+}
+.admin-dashboard-nisn {
+  font-size: 1rem;
+  color: #d1a4f7;
+  opacity: 0.7;
+  margin-top: 2px;
+}
+.admin-dashboard-header-actions {
+  display: flex;
+  gap: 14px;
+  padding-right: 32px;
+}
+.admin-dashboard-btn-primary {
+  background: #d946ef;
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 10px #d946ef88;
+}
+.admin-dashboard-btn-primary:hover {
+  background: #a21caf;
+}
+.admin-dashboard-btn-outline {
+  background: transparent;
+  color: #d1a4f7;
+  border: 1.5px solid #d1a4f7;
+}
+.admin-dashboard-btn-outline:hover {
+  background: #2a1a3b;
+  color: #fff;  border-color: #fff;
+}
+.admin-dashboard-main {
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-top: 120px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+}
+.admin-dashboard-row {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+  justify-content: flex-start;
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+.admin-dashboard-card {
+  background: rgba(10,25,49,0.7);
+  border: 2px solid #00e6ff55;
+  border-radius: 16px;
+  box-shadow: 0 0 24px #00e6ff22;
+  padding: 22px 28px;
+  min-width: 180px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+.admin-dashboard-card.pending { border-color: #ffe066; }
+.admin-dashboard-card.inprogress { border-color: #00e6ff; }
+.admin-dashboard-card.completed { border-color: #00ffb3; }
+.admin-dashboard-card .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #ffe066;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: -18px;
+}
+.admin-dashboard-card.inprogress .card-title { color: #00e6ff; }
+.admin-dashboard-card.completed .card-title { color: #00ffb3; }
+.admin-dashboard-card .card-value {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.admin-dashboard-card .card-desc {
+  font-size: 0.95rem;
+  color: #b0c4de;
+  opacity: 0.7;
+}
+.admin-dashboard-section {
+  background: rgba(10,25,49,0.5);
+  border: 1.5px solid #00e6ff33;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00e6ff22;
+  padding: 10px 12px 8px 12px;
+  margin-bottom: 14px;
+}
+.admin-dashboard-section-title {
+  color: #00e6ff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+.admin-dashboard-filters {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+.admin-dashboard-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.admin-dashboard-input, .admin-dashboard-select {
+  background: rgba(24,30,42,0.55);
+  border: 1.5px solid #00e6ff;
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.admin-dashboard-input:focus, .admin-dashboard-select:focus {
+  border-color: #ffe066;
+}
+.admin-dashboard-analytics {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#category-analytics-chart {
+  width: 100%;
+  max-width: 340px;
+  height: 180px;
+  margin: 0 auto;
+}
+.admin-dashboard-complaints {
+  min-height: 120px;
+  margin-top: 18px;
+}
+.admin-dashboard-empty {
+  color: #00e6ff;
+  opacity: 0.7;
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 32px 0;
+}
+
+/* Tombol logout admin aktif dan desain seperti student */
+.admin-dashboard-btn {
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 6px 17px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
+  background: #d846ef28;
+  color: #fff;
+  border: none;
+  box-shadow: 0 0 10px #d846ef66;
+}
+.admin-dashboard-btn:hover {
+  background: #a21caf;
+}
+/* Geser tombol logout admin ke kiri */
+.admin-dashboard-btn {
+  margin-right: 50px;
+}
+
+/* Geser judul admin dashboard ke kanan dengan flex */
+.admin-dashboard-header > div:first-child {
+  margin-left: 80px;
+}

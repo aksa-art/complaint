@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+html, body {
+    height: 100%;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Quicksand', 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #000000 0%, #1a0033 100%);
+    /* background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    background-image: repeating-linear-gradient(
+        to right,
+        rgba(0, 153, 255, 0.074) 0px,
+        rgba(0, 153, 255, 0.084) 0.5px,
+        transparent 0.5px,
+        transparent 40px
+    ),
+    repeating-linear-gradient(
+        to bottom,
+        rgba(0, 153, 255, 0.074) 0px,
+        rgba(0, 153, 255, 0.084) 0.5px,
+        transparent 0.5px,
+        transparent 40px
+    );
+}
+.login-container {
+    background: rgba(24, 30, 42, 0.6);
+    border: 2px solid #0088b5;
+    border-radius: 20px;
+    box-shadow: 0 0 40px #00bfff44, 0 0 10px #0088b5;
+    padding: 40px 32px 24px 32px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.shield-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 18px;
+}
+.login-title {
+    color: #0088b5;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+.login-desc {
+    color: #b0c4de;
+    font-size: 1rem;
+    margin-bottom: 28px;
+}
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form-label {
+    color: #0088b5;
+    font-weight: 600;
+    margin-bottom: 6px;
+    margin-top: 12px;
+}
+.form-input {
+    background: #232a3b;
+    border: 1.5px solid #0088b5;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.form-input:focus {
+    border-color: #0dc6da;
+}
+.login-btn {
+    background: #0088b5;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 0;
+    margin-top: 18px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00bfff88;
+    transition: background 0.2s;
+}
+.login-btn:hover {
+    background: #00e6ff;
+}
+.demo-creds {
+    background: rgba(24, 30, 42, 0.7);
+    color: #b0c4de;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-top: 24px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #232a3b;
+}
+.back-link {
+    color: #0088b5;
+    text-decoration: none;
+    font-size: 1rem;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+}
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* admin */
+
+.admin-access-container {
+    background: rgba(24, 30, 42, 0.189) !important;
+    border: 2px solid #00aeff;
+    border-radius: 20px;
+    padding: 40px 32px 24px 32px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 1;
+}
+.admin-access-header {
+    margin-bottom: 18px;
+}
+.admin-access-icon {
+    margin-bottom: 18px;
+}
+.admin-access-title {
+    color: #0dc6da;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: 'Orbitron', 'Montserrat', 'Quicksand', sans-serif;
+}
+.admin-access-subtitle {
+    color: #b0c4de;
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.admin-access-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.admin-access-label {
+    color: #0dc6da;
+    font-weight: 700;
+    margin-bottom: 6px;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+}
+.admin-access-input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.admin-access-input-icon {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+.admin-access-input {
+    background: rgba(35, 42, 59, 0.7);
+    border: 1.5px solid #0dc6da;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px 16px;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.2s;
+    font-weight: 500;
+}
+.admin-access-input:focus {
+    border-color: #0088b5;
+}
+.admin-access-btn {
+    background: #0dc6da;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 8px;
+    padding: 18px 0;
+    margin-top: 22px;
+    cursor: pointer;
+    box-shadow: 0 0 16px #00e6ff88;
+    transition: background 0.2s;
+    width: 100%;
+    letter-spacing: 1px;
+}
+.admin-access-btn:hover {
+    background: #0088b5;
+}
+
+/* student */
+
+.student-portal-container {
+    background: rgba(24, 30, 42, 0.456);
+    border: 2px solid #d946ef;
+    border-radius: 20px;
+    padding: 40px 32px 24px 32px;
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 1;
+}
+.student-portal-header {
+    margin-bottom: 18px;
+}
+.student-portal-icon {
+    margin-bottom: 18px;
+}
+.student-portal-title {
+    color: #d946ef;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: 'Orbitron', 'Montserrat', 'Quicksand', sans-serif;
+}
+.student-portal-subtitle {
+    color: #b0c4de;
+    font-size: 1.1rem;
+    margin-bottom: 24px;
+    text-align: center;
+}
+.student-portal-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.student-portal-label {
+    color: #d946ef;
+    font-weight: 700;
+    margin-bottom: 6px;
+    margin-top: 12px;
+    letter-spacing: 0.5px;
+}
+.student-portal-input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.student-portal-input-icon {
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+}
+.student-portal-input {
+    background: rgba(35, 42, 59, 0.26);
+    border: 1.5px solid #d946ef;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 12px 16px;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.2s;
+    font-weight: 500;
+}
+.student-portal-input:focus {
+    border-color: #d946ef;
+}
+.student-portal-btn {
+    background: #d946ef;
+    color: #fff;
+    font-weight: 800;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 8px;
+    padding: 18px 0;
+    margin-top: 22px;
+    cursor: pointer;
+    box-shadow: 0 0 16px #d946ef88;
+    transition: background 0.2s;
+    width: 100%;
+    letter-spacing: 1px;
+}
+.student-portal-btn:hover {
+    background: #a21caf;
+}
+
+/* Role Selection Cyberpunk Style */
+.role-bg-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at 30% 70%, rgba(0,230,255,0.10) 0%, transparent 70%),
+                radial-gradient(ellipse at 70% 80%, rgba(217,70,239,0.10) 0%, transparent 70%);
+}
+.role-container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.role-title-gradient {
+    font-family: 'Orbitron', 'Montserrat', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+    background: linear-gradient(90deg, #d1a4f7 0%, #00e6ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 8px;
+}
+.role-subtitle {
+    color: #7ee0ff;
+    font-size: 1.3rem;
+    letter-spacing: 0.25em;
+    text-align: center;
+    margin-bottom: 18px;
+}
+.role-divider {
+    width: 180px;
+    height: 4px;
+    background: linear-gradient(90deg, #00e6ff 0%, #d1a4f7 100%);
+    border-radius: 2px;
+    margin: 0 auto 36px auto;
+    opacity: 0.5;
+}
+.role-cards {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+.role-card {
+    background: rgba(24, 30, 42, 0.18);
+    border-radius: 20px;
+    border: 2.5px solid;
+    min-width: 340px;
+    max-width: 380px;
+    flex: 1 1 340px;
+    padding: 38px 32px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 32px 8px rgba(0,230,255,0.10), 0 0 0 0 #fff;
+    text-decoration: none;
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+    position: relative;
+    margin-bottom: 12px;
+}
+.role-card-admin {
+    border-color: #00e6ff;
+    box-shadow: 0 0 32px 4px #00e6ff44;
+}
+.role-card-student {
+    border-color: #d946ef;
+    box-shadow: 0 0 32px 4px #d946ef44;
+}
+.role-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 48px 12px #00e6ff88, 0 0 0 0 #fff;
+    z-index: 2;
+}
+.role-card-student:hover {
+    box-shadow: 0 0 48px 12px #d946ef88, 0 0 0 0 #fff;
+}
+.role-card-icon {
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.role-card-title {
+    font-family: 'Orbitron', 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #00e6ff;
+    margin-bottom: 6px;
+    text-align: center;
+}
+.role-card-student .role-card-title {
+    color: #d946ef;
+}
+.role-card-desc {
+    color: #7ee0ff;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.role-card-student .role-card-desc {
+    color: #e0aaff;
+}
+.role-card-list {
+    color: #7ee0ff;
+    font-size: 1.05rem;
+    margin: 0;
+    padding: 0 0 0 18px;
+    text-align: left;
+    list-style: disc;
+}
+.role-card-student .role-card-list {
+    color: #e0aaff;
+}
+.role-footer {
+    color: #00e6ff;
+    font-size: 1rem;
+    opacity: 0.5;
+    letter-spacing: 0.15em;
+    text-align: center;
+    margin-top: 32px;
+}
+@media (max-width: 900px) {
+    .role-cards {
+        flex-direction: column;
+        gap: 32px;
+        align-items: center;
+    }
+    .role-card {
+        min-width: 260px;
+        max-width: 98vw;
+    }
+}
